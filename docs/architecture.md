@@ -1,8 +1,8 @@
-# Simplified AI Generated Clothing Brand - System Architecture
+# The Daily Drip - System Architecture
 
 ## 1. Overview
 
-This document describes the simplified technical architecture for the AI Generated Clothing Brand service. The system will automatically generate ONE daily trending topic shirt using AI and upload it to a print-on-demand service with maximum simplicity.
+This document describes the technical architecture for The Daily Drip service. The system will automatically generate ONE exclusive, limited-edition clothing design each day and upload it to a print-on-demand service.
 
 ## 2. Simplified Architecture Diagram
 

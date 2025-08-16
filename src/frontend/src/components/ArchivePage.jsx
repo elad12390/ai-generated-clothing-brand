@@ -20,7 +20,7 @@ const ArchivePage = () => {
       {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-900">AI Generated Clothing</h1>
+          <h1 className="text-2xl font-bold text-gray-900">The Daily Drip</h1>
           <nav>
             <ul className="flex space-x-6">
               <li><Link to="/" className="text-gray-700 hover:text-gray-900">Home</Link></li>
@@ -91,7 +91,7 @@ const ArchivePage = () => {
             </div>
             <div className="mt-8 md:mt-0 md:order-1">
               <p className="text-center text-base text-gray-400">
-                &copy; 2025 AI Generated Clothing Brand. All rights reserved.
+                &copy; 2025 The Daily Drip. All rights reserved.
               </p>
             </div>
           </div>

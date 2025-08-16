@@ -1,4 +1,4 @@
-# AI Generated Clothing Brand
+# The Daily Drip
 
 An automated service that generates one trending topic shirt per day using AI.
 

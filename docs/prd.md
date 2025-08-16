@@ -1,28 +1,26 @@
-# AI Generated Clothing Brand - Product Requirements Document (PRD)
+# The Daily Drip - Product Requirements Document (PRD)
 
 ## 1. Introduction
 
 ### 1.1 Purpose
-This document outlines the requirements for an AI-generated clothing brand service that automatically creates and publishes trending topic shirts daily, leveraging scarcity and exclusivity to build hype around each new release, while being deployable to a cheap cloud service for 24/7 operation.
+This document outlines the requirements for The Daily Drip, an exclusive fashion brand that automatically creates and publishes one limited-edition clothing design each day, leveraging scarcity and exclusivity to build hype around each new release.
 
 ### 1.2 Scope
 The service will:
 - Analyze daily trending topics
-- Generate ONE exclusive shirt design per day using AI
-- Store shirt history in a database
-- Publish shirts to a website
+- Generate ONE exclusive clothing design per day using AI
+- Store design history in a database
+- Publish designs to a website
 - Integrate with print-on-demand suppliers
 - Build anticipation and hype for each daily release
-- Be deployable to a cheap cloud service for 24/7 operation
 
 ### 1.3 Goals
-- Create daily scarcity with exclusive shirt designs
+- Create daily scarcity with exclusive clothing designs
 - Build hype and anticipation for each new release
-- Automate daily shirt creation based on trending topics
+- Automate daily design creation based on trending topics
 - Minimize operational overhead through print-on-demand services
-- Maintain a growing catalog of unique AI-generated shirts
+- Maintain a growing catalog of unique AI-generated designs
 - Provide a website for showcasing and linking to product details
-- Be deployable to a cheap cloud service for 24/7 operation
 
 ## 2. Product Features
 

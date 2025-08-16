@@ -1,7 +1,7 @@
-# Simplified AI Generated Clothing Brand - Project Brief
+# The Daily Drip - Project Brief
 
 ## Project Overview
-An automated service that generates daily trending topic shirts using AI with maximum simplicity.
+An exclusive fashion brand that delivers one mysterious, limited-edition clothing design each day through automated AI generation.
 
 ## Core Concept
 1. ONE automatic shirt per day with trending topic
