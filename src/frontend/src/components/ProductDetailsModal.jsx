@@ -18,6 +18,7 @@ const ProductDetailsModal = ({ shirt, isOpen, onClose }) => {
           </div>
           <div className="mt-4">
             <h3 className="text-xl font-semibold text-gray-900">{shirt?.topic}</h3>
+          </div>
           
           <div className="mt-4">
             <img 
@@ -41,7 +42,7 @@ const ProductDetailsModal = ({ shirt, isOpen, onClose }) => {
             <div className="mt-6">
               <h3 className="text-lg font-medium text-gray-900">About this design</h3>
               <p className="mt-2 text-gray-600">
-                {shirt?.description || "An exclusive AI-generated design featuring today's trending topic."}
+                {shirt?.description || "An exclusive design featuring today's inspiration."}
               </p>
             </div>
             

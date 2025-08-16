@@ -32,19 +32,13 @@ const AboutPage = () => {
 
           <div className="prose prose-lg mx-auto text-gray-700">
             <p className="mb-6">
-              AI Generated Clothing is a revolutionary fashion brand that harnesses the power of artificial intelligence to create unique, limited-edition clothing designs. Our innovative approach combines cutting-edge AI technology with print-on-demand manufacturing to deliver one-of-a-kind apparel that celebrates the intersection of technology and fashion.
+              AI Generated Clothing is a revolutionary fashion brand that creates unique, limited-edition clothing designs. Our innovative approach combines cutting-edge technology with print-on-demand manufacturing to deliver one-of-a-kind apparel that celebrates the intersection of technology and fashion.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">How It Works</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">The Mystery</h2>
             <p className="mb-6">
-              Our process is simple yet sophisticated:
+              What makes each design special is not just its uniqueness, but the mystery behind its creation. Each day, a new design appears, inspired by the cultural zeitgeist, available for exactly 24 hours before disappearing forever.
             </p>
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li>Our AI analyzes trending topics and cultural conversations daily</li>
-              <li>Advanced machine learning algorithms generate unique shirt designs based on these trends</li>
-              <li>Each design is available for exactly 24 hours, creating a sense of urgency and exclusivity</li>
-              <li>When you purchase a design, it's printed on-demand and shipped directly to you</li>
-            </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Our Mission</h2>
             <p className="mb-6">
@@ -62,15 +56,10 @@ const AboutPage = () => {
               <li>Our packaging is minimal and recyclable</li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Technology Partners</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Our Network</h2>
             <p className="mb-6">
-              We're proud to partner with leading technology providers to bring our vision to life:
+              We've partnered with industry leaders to ensure the highest quality production and fulfillment of our designs.
             </p>
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li>Google AI for our machine learning and image generation capabilities</li>
-              <li>Printful for our print-on-demand manufacturing and fulfillment</li>
-              <li>Supabase for our database and backend infrastructure</li>
-            </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Join the Movement</h2>
             <p>

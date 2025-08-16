@@ -82,7 +82,7 @@ function App() {
                 {dailyShirt?.topic || "Loading..."}
               </p>
               <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-                A unique AI-generated design, available for a limited time only.
+                A unique design, available for a limited time only.
               </p>
             </div>
 

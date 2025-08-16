@@ -39,7 +39,7 @@ const ArchivePage = () => {
               Design Archive
             </h1>
             <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-              Browse through our collection of exclusive AI-generated designs
+              A collection of our rarest and most coveted designs
             </p>
           </div>
 
