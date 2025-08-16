@@ -9,14 +9,16 @@ function App() {
   const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 })
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  // Fetch the daily shirt from the API
+  // Mock data for the daily shirt
   useEffect(() => {
-    const fetchDailyShirt = async () => {
-      const shirt = await getDailyShirt();
-      setDailyShirt(shirt);
-    };
-
-    fetchDailyShirt();
+    // In a real implementation, this would come from an API
+    setDailyShirt({
+      id: 1,
+      topic: "Midnight Garden",
+      imageUrl: "https://placehold.co/600x600/000000/FFFFFF?text=Midnight+Garden",
+      createdAt: new Date().toISOString(),
+      description: "Today's exclusive design featuring Midnight Garden"
+    })
 
     // Countdown timer setup
     const calculateTimeLeft = () => {
@@ -58,14 +60,14 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm">
+      <header className="bg-daily-drip-black shadow-sm border-b border-daily-drip-gold">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-900">The Daily Drip</h1>
+          <h1 className="text-2xl font-bold text-daily-drip-white">The Daily Drip</h1>
           <nav>
             <ul className="flex space-x-6">
-              <li><Link to="/" className="text-indigo-600 font-medium">Home</Link></li>
-              <li><Link to="/archive" className="text-gray-700 hover:text-gray-900">Archive</Link></li>
-              <li><Link to="/about" className="text-gray-700 hover:text-gray-900">About</Link></li>
+              <li><Link to="/" className="text-daily-drip-gold font-medium">Home</Link></li>
+              <li><Link to="/archive" className="text-daily-drip-white hover:text-daily-drip-gold">Archive</Link></li>
+              <li><Link to="/about" className="text-daily-drip-white hover:text-daily-drip-gold">About</Link></li>
             </ul>
           </nav>
         </div>
@@ -77,33 +79,33 @@ function App() {
         <section className="py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase">Today's Exclusive</h2>
-              <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+              <h2 className="text-base font-semibold text-daily-drip-gold tracking-wide uppercase">Today's Exclusive</h2>
+              <p className="mt-1 text-4xl font-extrabold text-daily-drip-white sm:text-5xl sm:tracking-tight lg:text-6xl">
                 {dailyShirt?.topic || "Loading..."}
               </p>
-              <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
+              <p className="max-w-xl mt-5 mx-auto text-xl text-gray-300">
                 A unique design, available for a limited time only.
               </p>
             </div>
 
-            <div className="mt-12 bg-white shadow-xl rounded-lg overflow-hidden max-w-3xl mx-auto">
+            <div className="mt-12 bg-daily-drip-white shadow-xl rounded-lg overflow-hidden max-w-3xl mx-auto">
               <div className="p-6">
                 <div className="flex justify-between items-start">
                   <div>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-daily-drip-gold text-daily-drip-black">
                       Limited Edition
                     </span>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm text-gray-500">Next release in</p>
+                    <p className="text-sm text-gray-600">Next release in</p>
                     <div className="mt-1 flex space-x-2">
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-daily-drip-black text-daily-drip-white border border-daily-drip-gold">
                         {timeLeft.hours.toString().padStart(2, '0')}
                       </span>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-daily-drip-black text-daily-drip-white border border-daily-drip-gold">
                         {timeLeft.minutes.toString().padStart(2, '0')}
                       </span>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-daily-drip-black text-daily-drip-white border border-daily-drip-gold">
                         {timeLeft.seconds.toString().padStart(2, '0')}
                       </span>
                     </div>
@@ -112,7 +114,7 @@ function App() {
 
                 <div className="mt-6">
                   <img 
-                    src={dailyShirt?.imageUrl || "https://placehold.co/600x600/2563eb/white?text=Loading..."} 
+                    src={dailyShirt?.imageUrl || "https://placehold.co/600x600/000000/FFFFFF?text=Loading..."} 
                     alt={dailyShirt?.topic || "Loading..."} 
                     className="w-full h-auto rounded-lg"
                   />
@@ -121,7 +123,7 @@ function App() {
                 <div className="mt-6 flex justify-center">
                   <button 
                     onClick={openModal}
-                    className="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    className="daily-drip-button px-6 py-3 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-daily-drip-gold"
                   >
                     View Details
                   </button>

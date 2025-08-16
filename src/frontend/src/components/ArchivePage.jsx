@@ -18,14 +18,14 @@ const ArchivePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm">
+      <header className="bg-daily-drip-black shadow-sm border-b border-daily-drip-gold">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-900">The Daily Drip</h1>
+          <h1 className="text-2xl font-bold text-daily-drip-white">The Daily Drip</h1>
           <nav>
             <ul className="flex space-x-6">
-              <li><Link to="/" className="text-gray-700 hover:text-gray-900">Home</Link></li>
-              <li><Link to="/archive" className="text-indigo-600 font-medium">Archive</Link></li>
-              <li><Link to="/about" className="text-gray-700 hover:text-gray-900">About</Link></li>
+              <li><Link to="/" className="text-daily-drip-white hover:text-daily-drip-gold">Home</Link></li>
+              <li><Link to="/archive" className="text-daily-drip-gold font-medium">Archive</Link></li>
+              <li><Link to="/about" className="text-daily-drip-white hover:text-daily-drip-gold">About</Link></li>
             </ul>
           </nav>
         </div>
@@ -33,12 +33,12 @@ const ArchivePage = () => {
 
       {/* Main Content */}
       <main>
-        <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h1 className="text-3xl font-extrabold text-daily-drip-white sm:text-4xl">
               Design Archive
             </h1>
-            <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+            <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-300 sm:mt-4">
               A collection of our rarest and most coveted designs
             </p>
           </div>
@@ -46,15 +46,15 @@ const ArchivePage = () => {
           <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {shirts.map((shirt) => (
               <div key={shirt.id} className="group">
-                <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-800 xl:aspect-w-7 xl:aspect-h-8">
                   <img
                     src={shirt.imageUrl}
                     alt={shirt.topic}
-                    className="h-full w-full object-cover object-center group-hover:opacity-75"
+                    className="h-full w-full object-cover object-center group-hover:opacity-75 border border-daily-drip-gold"
                   />
                 </div>
-                <h3 className="mt-4 text-sm text-gray-700">{shirt.topic}</h3>
-                <p className="mt-1 text-lg font-medium text-gray-900">
+                <h3 className="mt-4 text-sm text-daily-drip-white">{shirt.topic}</h3>
+                <p className="mt-1 text-lg font-medium text-daily-drip-gold">
                   {new Date(shirt.createdAt).toLocaleDateString()}
                 </p>
               </div>

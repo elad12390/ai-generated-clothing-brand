@@ -5,14 +5,14 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm">
+      <header className="bg-daily-drip-black shadow-sm border-b border-daily-drip-gold">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-900">The Daily Drip</h1>
+          <h1 className="text-2xl font-bold text-daily-drip-white">The Daily Drip</h1>
           <nav>
             <ul className="flex space-x-6">
-              <li><Link to="/" className="text-gray-700 hover:text-gray-900">Home</Link></li>
-              <li><Link to="/archive" className="text-gray-700 hover:text-gray-900">Archive</Link></li>
-              <li><Link to="/about" className="text-indigo-600 font-medium">About</Link></li>
+              <li><Link to="/" className="text-daily-drip-white hover:text-daily-drip-gold">Home</Link></li>
+              <li><Link to="/archive" className="text-daily-drip-white hover:text-daily-drip-gold">Archive</Link></li>
+              <li><Link to="/about" className="text-daily-drip-gold font-medium">About</Link></li>
             </ul>
           </nav>
         </div>
@@ -22,61 +22,61 @@ const AboutPage = () => {
       <main>
         <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
           <div className="lg:text-center mb-16">
-            <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              About AI Generated Clothing
+            <h1 className="text-3xl font-extrabold text-daily-drip-white sm:text-4xl">
+              About The Daily Drip
             </h1>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              Where artificial intelligence meets fashion
+            <p className="mt-4 max-w-2xl text-xl text-gray-300 lg:mx-auto">
+              Where exclusivity meets creativity
             </p>
           </div>
 
-          <div className="prose prose-lg mx-auto text-gray-700">
+          <div className="prose prose-lg mx-auto text-daily-drip-white">
             <p className="mb-6">
-              AI Generated Clothing is a revolutionary fashion brand that creates unique, limited-edition clothing designs. Our innovative approach combines cutting-edge technology with print-on-demand manufacturing to deliver one-of-a-kind apparel that celebrates the intersection of technology and fashion.
+              The Daily Drip is an exclusive fashion collective that creates one-of-a-kind clothing designs each day. Our mysterious creative process combines cutting-edge technology with artistic vision to deliver wearable art that captures the essence of contemporary culture.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">The Mystery</h2>
+            <h2 className="text-2xl font-bold text-daily-drip-gold mt-12 mb-6">The Mystery</h2>
             <p className="mb-6">
-              What makes each design special is not just its uniqueness, but the mystery behind its creation. Each day, a new design appears, inspired by the cultural zeitgeist, available for exactly 24 hours before disappearing forever.
+              What makes each design special isn't just its uniqueness, but the mystery behind its creation. Each day, a new design appears, inspired by the cultural zeitgeist, available for exactly 24 hours before disappearing forever.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Our Mission</h2>
+            <h2 className="text-2xl font-bold text-daily-drip-gold mt-12 mb-6">Our Mission</h2>
             <p className="mb-6">
-              We believe that fashion should be both expressive and sustainable. By creating limited-edition designs and using print-on-demand manufacturing, we eliminate waste while celebrating the ever-changing landscape of digital culture. Each shirt is a wearable piece of art that captures a moment in time.
+              We believe that fashion should be both expressive and sustainable. By creating limited-edition designs and using print-on-demand manufacturing, we eliminate waste while celebrating the ever-changing landscape of digital culture. Each piece is a wearable work of art that captures a moment in time.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Sustainability</h2>
+            <h2 className="text-2xl font-bold text-daily-drip-gold mt-12 mb-6">Sustainability</h2>
             <p className="mb-6">
               Traditional fashion contributes significantly to environmental pollution through overproduction and waste. Our model is different:
             </p>
-            <ul className="list-disc pl-6 mb-6 space-y-2">
+            <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-300">
               <li>No inventory is produced until an order is placed</li>
               <li>Only designs that are purchased are manufactured</li>
               <li>We use eco-friendly inks and sustainable materials whenever possible</li>
               <li>Our packaging is minimal and recyclable</li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Our Network</h2>
+            <h2 className="text-2xl font-bold text-daily-drip-gold mt-12 mb-6">Our Network</h2>
             <p className="mb-6">
               We've partnered with industry leaders to ensure the highest quality production and fulfillment of our designs.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Join the Movement</h2>
+            <h2 className="text-2xl font-bold text-daily-drip-gold mt-12 mb-6">Join the Movement</h2>
             <p>
-              Be part of a new era in fashion where technology and creativity converge. Follow us on social media to stay updated on daily releases, and don't forget to share your purchases with the hashtag #AIGeneratedClothing.
+              Be part of an exclusive community that values creativity and scarcity. Follow us on social media to stay updated on daily releases, and don't forget to showcase your drip with the hashtag #TheDailyDrip.
             </p>
           </div>
 
-          <div className="mt-16 bg-indigo-50 rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Experience the Future of Fashion?</h2>
-            <p className="text-lg text-gray-700 mb-6">
+          <div className="mt-16 bg-daily-drip-gold rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-bold text-daily-drip-black mb-4">Ready to Experience Tomorrow's Drip Today?</h2>
+            <p className="text-lg text-daily-drip-black mb-6">
               Visit our homepage to see today's exclusive design
             </p>
             <Link 
               to="/" 
-              className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="inline-block daily-drip-button px-6 py-3 rounded-md font-medium hover:bg-daily-drip-gold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-daily-drip-gold"
             >
-              View Today's Design
+              View Today's Drip
             </Link>
           </div>
         </div>
