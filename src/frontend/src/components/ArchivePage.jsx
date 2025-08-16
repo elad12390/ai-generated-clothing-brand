@@ -1,52 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getShirtArchive } from '../services/api';
 
 const ArchivePage = () => {
   const [shirts, setShirts] = useState([]);
 
-  // Mock data for archive shirts
+  // Fetch the shirt archive from the API
   useEffect(() => {
-    // In a real implementation, this would come from an API
-    const mockShirts = [
-      {
-        id: 1,
-        topic: "Machine Learning",
-        imageUrl: "https://placehold.co/300x300/8b5cf6/white?text=ML+Shirt",
-        createdAt: new Date(Date.now() - 86400000).toISOString(), // Yesterday
-      },
-      {
-        id: 2,
-        topic: "Neural Networks",
-        imageUrl: "https://placehold.co/300x300/0ea5e9/white?text=NN+Shirt",
-        createdAt: new Date(Date.now() - 2 * 86400000).toISOString(), // 2 days ago
-      },
-      {
-        id: 3,
-        topic: "Data Science",
-        imageUrl: "https://placehold.co/300x300/10b981/white?text=DS+Shirt",
-        createdAt: new Date(Date.now() - 3 * 86400000).toISOString(), // 3 days ago
-      },
-      {
-        id: 4,
-        topic: "Cloud Computing",
-        imageUrl: "https://placehold.co/300x300/f97316/white?text=CC+Shirt",
-        createdAt: new Date(Date.now() - 4 * 86400000).toISOString(), // 4 days ago
-      },
-      {
-        id: 5,
-        topic: "Cybersecurity",
-        imageUrl: "https://placehold.co/300x300/ef4444/white?text=CS+Shirt",
-        createdAt: new Date(Date.now() - 5 * 86400000).toISOString(), // 5 days ago
-      },
-      {
-        id: 6,
-        topic: "Blockchain",
-        imageUrl: "https://placehold.co/300x300/06b6d4/white?text=BC+Shirt",
-        createdAt: new Date(Date.now() - 6 * 86400000).toISOString(), // 6 days ago
-      },
-    ];
-    
-    setShirts(mockShirts);
+    const fetchShirtArchive = async () => {
+      const archiveShirts = await getShirtArchive();
+      setShirts(archiveShirts);
+    };
+
+    fetchShirtArchive();
   }, []);
 
   return (

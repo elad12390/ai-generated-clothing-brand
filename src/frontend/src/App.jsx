@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import ProductDetailsModal from './components/ProductDetailsModal'
+import { getDailyShirt } from './services/api'
 import './App.css'
 
 function App() {
@@ -8,16 +9,14 @@ function App() {
   const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 })
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  // Mock data for the daily shirt
+  // Fetch the daily shirt from the API
   useEffect(() => {
-    // In a real implementation, this would come from an API
-    setDailyShirt({
-      id: 1,
-      topic: "AI Technology",
-      imageUrl: "https://placehold.co/600x600/2563eb/white?text=AI+Technology+Shirt",
-      createdAt: new Date().toISOString(),
-      description: "Today's exclusive AI-generated design featuring AI Technology"
-    })
+    const fetchDailyShirt = async () => {
+      const shirt = await getDailyShirt();
+      setDailyShirt(shirt);
+    };
+
+    fetchDailyShirt();
 
     // Countdown timer setup
     const calculateTimeLeft = () => {
