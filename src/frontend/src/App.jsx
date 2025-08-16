@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import ProductDetailsModal from './components/ProductDetailsModal'
+import Logo from './components/Logo'
 import { getDailyShirt } from './services/api'
 import './App.css'
 
@@ -62,7 +63,10 @@ function App() {
       {/* Header */}
       <header className="bg-daily-drip-black shadow-sm border-b border-daily-drip-gold">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-daily-drip-white">The Daily Drip</h1>
+          <div className="flex items-center space-x-4">
+            <Logo size="default" />
+            <h1 className="text-2xl font-bold text-daily-drip-white">The Daily Drip</h1>
+          </div>
           <nav>
             <ul className="flex space-x-6">
               <li><Link to="/" className="text-daily-drip-gold font-medium">Home</Link></li>
