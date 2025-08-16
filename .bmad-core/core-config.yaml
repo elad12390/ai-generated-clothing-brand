@@ -1,0 +1,19 @@
+project:
+  name: "AI Generated Clothing Brand"
+  type: "service"
+  description: "A service that generates daily trending shirts with AI"
+  
+agents:
+  default: "bmad-orchestrator"
+  storyCreator: "sm"
+  storyValidator: "po"
+  implementer: "dev"
+  reviewer: "qa"
+  planner: "pm"
+  researcher: "analyst"
+  architect: "architect"
+
+paths:
+  docs: "docs/"
+  stories: "docs/stories/"
+  artifacts: "docs/artifacts/"
