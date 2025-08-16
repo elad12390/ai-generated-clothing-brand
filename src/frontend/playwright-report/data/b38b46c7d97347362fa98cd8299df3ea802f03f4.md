@@ -1,0 +1,46 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - heading "AI Generated Clothing" [level=1]
+  - navigation:
+    - list:
+      - listitem:
+        - link "Home":
+          - /url: /
+      - listitem:
+        - link "Archive":
+          - /url: /archive
+      - listitem:
+        - link "About":
+          - /url: /about
+- main:
+  - heading "Design Archive" [level=1]
+  - paragraph: Browse through our collection of exclusive AI-generated designs
+  - img "Machine Learning"
+  - heading "Machine Learning" [level=3]
+  - paragraph: 8/15/2025
+  - img "Neural Networks"
+  - heading "Neural Networks" [level=3]
+  - paragraph: 8/14/2025
+  - img "Data Science"
+  - heading "Data Science" [level=3]
+  - paragraph: 8/13/2025
+  - img "Cloud Computing"
+  - heading "Cloud Computing" [level=3]
+  - paragraph: 8/12/2025
+  - img "Cybersecurity"
+  - heading "Cybersecurity" [level=3]
+  - paragraph: 8/11/2025
+  - img "Blockchain"
+  - heading "Blockchain" [level=3]
+  - paragraph: 8/10/2025
+- contentinfo:
+  - paragraph: AI Generated Clothing Brand
+  - paragraph: Powered by AI & Print-on-Demand
+  - link "Twitter":
+    - /url: "#"
+  - link "Instagram":
+    - /url: "#"
+  - paragraph: © 2025 AI Generated Clothing Brand. All rights reserved.
+```

@@ -8,7 +8,7 @@ const ProductDetailsModal = ({ shirt, isOpen, onClose }) => {
       <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         <div className="p-6">
           <div className="flex justify-between items-start">
-            <h2 className="text-2xl font-bold text-gray-900">{shirt?.topic}</h2>
+            <h2 className="text-2xl font-bold text-gray-900">Product Details</h2>
             <button 
               onClick={onClose}
               className="text-gray-400 hover:text-gray-500 text-2xl font-bold"
@@ -16,6 +16,8 @@ const ProductDetailsModal = ({ shirt, isOpen, onClose }) => {
               &times;
             </button>
           </div>
+          <div className="mt-4">
+            <h3 className="text-xl font-semibold text-gray-900">{shirt?.topic}</h3>
           
           <div className="mt-4">
             <img 

@@ -1,0 +1,59 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - heading "AI Generated Clothing" [level=1]
+  - navigation:
+    - list:
+      - listitem:
+        - link "Home":
+          - /url: /
+      - listitem:
+        - link "Archive":
+          - /url: /archive
+      - listitem:
+        - link "About":
+          - /url: /about
+- main:
+  - heading "Today's Exclusive" [level=2]
+  - paragraph: AI Technology
+  - paragraph: A unique AI-generated design, available for a limited time only.
+  - text: Limited Edition
+  - paragraph: Next release in
+  - text: 00 04 27
+  - img "AI Technology"
+  - button "View Details"
+  - heading "How It Works" [level=2]
+  - paragraph: Daily AI-Generated Clothing
+  - paragraph: One unique design. One day only. Powered by artificial intelligence.
+  - text: "1"
+  - paragraph: Trending Topics
+  - paragraph: Our AI analyzes trending topics daily to inspire unique designs.
+  - text: "2"
+  - paragraph: AI Generation
+  - paragraph: Advanced AI creates one-of-a-kind shirt designs based on the trending topic.
+  - text: "3"
+  - paragraph: Limited Release
+  - paragraph: Each design is available for 24 hours only, then gone forever.
+- heading "AI Technology" [level=2]
+- button "×"
+- img "AI Technology"
+- paragraph: Release Date
+- paragraph: 8/16/2025
+- text: Limited Edition
+- heading "About this design" [level=3]
+- paragraph: Today's exclusive AI-generated design featuring AI Technology
+- heading "QR Code" [level=3]
+- img "QR Code"
+- paragraph: Scan to purchase this limited edition design
+- button "Buy Now"
+- button "Share"
+- contentinfo:
+  - paragraph: AI Generated Clothing Brand
+  - paragraph: Powered by AI & Print-on-Demand
+  - link "Twitter":
+    - /url: "#"
+  - link "Instagram":
+    - /url: "#"
+  - paragraph: © 2025 AI Generated Clothing Brand. All rights reserved.
+```
