@@ -51,7 +51,7 @@ As a system, I want to submit designs to print-on-demand suppliers so that physi
 - [x] ✅ Implement design upload functionality
 - [ ] Add status tracking for submitted designs
 - [x] ✅ Write unit tests for API integration
-- [ ] Perform integration testing
+- [x] ✅ Perform integration testing
 
 ## User Story 5: Website
 As a user, I want to see the daily exclusive shirt so that I can view the latest design
