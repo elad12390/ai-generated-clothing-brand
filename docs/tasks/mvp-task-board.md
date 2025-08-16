@@ -57,9 +57,9 @@ As a system, I want to submit designs to print-on-demand suppliers so that physi
 As a user, I want to see the daily exclusive shirt so that I can view the latest design
 
 ### Tasks
-- [ ] Set up basic React application with Tailwind CSS
-- [ ] Create home page with daily shirt display
-- [ ] Implement shirt gallery view
+- [x] ✅ Set up basic React application with Tailwind CSS
+- [x] ✅ Create home page with daily shirt display
+- [x] ✅ Implement shirt gallery view
 - [ ] Add about page
 - [ ] Deploy website
 
