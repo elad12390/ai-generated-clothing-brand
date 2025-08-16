@@ -1,1 +1,45 @@
+# Environment variables
 .env
+
+# Frontend build artifacts
+/src/frontend/dist
+/src/frontend/node_modules
+/src/frontend/.vite
+/src/frontend/.cache
+
+# Logs
+/logs/*.log
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual environments
+.venv
+venv
+env
+ENV
+
+# IDEs
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
