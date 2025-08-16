@@ -1,54 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ArchivePage = () => {
-  const [shirts, setShirts] = useState([]);
-
-  // Mock data for archive shirts
-  useEffect(() => {
-    // In a real implementation, this would come from an API
-    const mockShirts = [
-      {
-        id: 1,
-        topic: "Machine Learning",
-        imageUrl: "https://placehold.co/300x300/8b5cf6/white?text=ML+Shirt",
-        createdAt: new Date(Date.now() - 86400000).toISOString(), // Yesterday
-      },
-      {
-        id: 2,
-        topic: "Neural Networks",
-        imageUrl: "https://placehold.co/300x300/0ea5e9/white?text=NN+Shirt",
-        createdAt: new Date(Date.now() - 2 * 86400000).toISOString(), // 2 days ago
-      },
-      {
-        id: 3,
-        topic: "Data Science",
-        imageUrl: "https://placehold.co/300x300/10b981/white?text=DS+Shirt",
-        createdAt: new Date(Date.now() - 3 * 86400000).toISOString(), // 3 days ago
-      },
-      {
-        id: 4,
-        topic: "Cloud Computing",
-        imageUrl: "https://placehold.co/300x300/f97316/white?text=CC+Shirt",
-        createdAt: new Date(Date.now() - 4 * 86400000).toISOString(), // 4 days ago
-      },
-      {
-        id: 5,
-        topic: "Cybersecurity",
-        imageUrl: "https://placehold.co/300x300/ef4444/white?text=CS+Shirt",
-        createdAt: new Date(Date.now() - 5 * 86400000).toISOString(), // 5 days ago
-      },
-      {
-        id: 6,
-        topic: "Blockchain",
-        imageUrl: "https://placehold.co/300x300/06b6d4/white?text=BC+Shirt",
-        createdAt: new Date(Date.now() - 6 * 86400000).toISOString(), // 6 days ago
-      },
-    ];
-    
-    setShirts(mockShirts);
-  }, []);
-
+const AboutPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -58,8 +11,8 @@ const ArchivePage = () => {
           <nav>
             <ul className="flex space-x-6">
               <li><Link to="/" className="text-gray-700 hover:text-gray-900">Home</Link></li>
-              <li><Link to="/archive" className="text-indigo-600 font-medium">Archive</Link></li>
-              <li><Link to="/about" className="text-gray-700 hover:text-gray-900">About</Link></li>
+              <li><Link to="/archive" className="text-gray-700 hover:text-gray-900">Archive</Link></li>
+              <li><Link to="/about" className="text-indigo-600 font-medium">About</Link></li>
             </ul>
           </nav>
         </div>
@@ -67,32 +20,75 @@ const ArchivePage = () => {
 
       {/* Main Content */}
       <main>
-        <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+        <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+          <div className="lg:text-center mb-16">
             <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Design Archive
+              About AI Generated Clothing
             </h1>
-            <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-              Browse through our collection of exclusive AI-generated designs
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+              Where artificial intelligence meets fashion
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            {shirts.map((shirt) => (
-              <div key={shirt.id} className="group">
-                <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
-                  <img
-                    src={shirt.imageUrl}
-                    alt={shirt.topic}
-                    className="h-full w-full object-cover object-center group-hover:opacity-75"
-                  />
-                </div>
-                <h3 className="mt-4 text-sm text-gray-700">{shirt.topic}</h3>
-                <p className="mt-1 text-lg font-medium text-gray-900">
-                  {new Date(shirt.createdAt).toLocaleDateString()}
-                </p>
-              </div>
-            ))}
+          <div className="prose prose-lg mx-auto text-gray-700">
+            <p className="mb-6">
+              AI Generated Clothing is a revolutionary fashion brand that harnesses the power of artificial intelligence to create unique, limited-edition clothing designs. Our innovative approach combines cutting-edge AI technology with print-on-demand manufacturing to deliver one-of-a-kind apparel that celebrates the intersection of technology and fashion.
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">How It Works</h2>
+            <p className="mb-6">
+              Our process is simple yet sophisticated:
+            </p>
+            <ul className="list-disc pl-6 mb-6 space-y-2">
+              <li>Our AI analyzes trending topics and cultural conversations daily</li>
+              <li>Advanced machine learning algorithms generate unique shirt designs based on these trends</li>
+              <li>Each design is available for exactly 24 hours, creating a sense of urgency and exclusivity</li>
+              <li>When you purchase a design, it's printed on-demand and shipped directly to you</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Our Mission</h2>
+            <p className="mb-6">
+              We believe that fashion should be both expressive and sustainable. By creating limited-edition designs and using print-on-demand manufacturing, we eliminate waste while celebrating the ever-changing landscape of digital culture. Each shirt is a wearable piece of art that captures a moment in time.
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Sustainability</h2>
+            <p className="mb-6">
+              Traditional fashion contributes significantly to environmental pollution through overproduction and waste. Our model is different:
+            </p>
+            <ul className="list-disc pl-6 mb-6 space-y-2">
+              <li>No inventory is produced until an order is placed</li>
+              <li>Only designs that are purchased are manufactured</li>
+              <li>We use eco-friendly inks and sustainable materials whenever possible</li>
+              <li>Our packaging is minimal and recyclable</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Technology Partners</h2>
+            <p className="mb-6">
+              We're proud to partner with leading technology providers to bring our vision to life:
+            </p>
+            <ul className="list-disc pl-6 mb-6 space-y-2">
+              <li>Google AI for our machine learning and image generation capabilities</li>
+              <li>Printful for our print-on-demand manufacturing and fulfillment</li>
+              <li>Supabase for our database and backend infrastructure</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Join the Movement</h2>
+            <p>
+              Be part of a new era in fashion where technology and creativity converge. Follow us on social media to stay updated on daily releases, and don't forget to share your purchases with the hashtag #AIGeneratedClothing.
+            </p>
+          </div>
+
+          <div className="mt-16 bg-indigo-50 rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Experience the Future of Fashion?</h2>
+            <p className="text-lg text-gray-700 mb-6">
+              Visit our homepage to see today's exclusive design
+            </p>
+            <Link 
+              to="/" 
+              className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              View Today's Design
+            </Link>
           </div>
         </div>
       </main>
@@ -135,4 +131,4 @@ const ArchivePage = () => {
   );
 };
 
-export default ArchivePage;
+export default AboutPage;

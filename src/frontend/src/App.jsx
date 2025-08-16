@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import ProductDetailsModal from './components/ProductDetailsModal'
 import './App.css'
 
@@ -63,9 +64,9 @@ function App() {
           <h1 className="text-2xl font-bold text-gray-900">AI Generated Clothing</h1>
           <nav>
             <ul className="flex space-x-6">
-              <li><a href="#" className="text-gray-700 hover:text-gray-900">Home</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-gray-900">Archive</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-gray-900">About</a></li>
+              <li><Link to="/" className="text-indigo-600 font-medium">Home</Link></li>
+              <li><Link to="/archive" className="text-gray-700 hover:text-gray-900">Archive</Link></li>
+              <li><Link to="/about" className="text-gray-700 hover:text-gray-900">About</Link></li>
             </ul>
           </nav>
         </div>

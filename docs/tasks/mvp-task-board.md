@@ -60,7 +60,7 @@ As a user, I want to see the daily exclusive shirt so that I can view the latest
 - [x] ✅ Set up basic React application with Tailwind CSS
 - [x] ✅ Create home page with daily shirt display
 - [x] ✅ Implement shirt gallery view
-- [ ] Add about page
+- [x] ✅ Add about page
 - [ ] Deploy website
 
 ## User Story 6: Integration & Deployment
