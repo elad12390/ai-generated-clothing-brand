@@ -34,9 +34,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           # Install repository-level requirements and backend requirements for tests
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          if [ -f src/backend/requirements.txt ]; then pip install -r src/backend/requirements.txt; fi
-          pip install pytest
+          if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
+          if [ -f src/backend/requirements.txt ]; then python -m pip install -r src/backend/requirements.txt; fi
+          python -m pip install pytest
 
       - name: Run tests
         run: |
