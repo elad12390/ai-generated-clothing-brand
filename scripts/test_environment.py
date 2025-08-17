@@ -14,34 +14,20 @@ def test_environment():
     print("Testing development environment setup...")
     
     # Test Google Generative AI
-    try:
-        print("✓ Google Generative AI package imported successfully")
-    except Exception as e:
-        print(f"✗ Failed to import Google Generative AI: {e}")
-        return False
+    # Google Generative AI import should raise if missing
+    print("✓ Google Generative AI package imported successfully")
     
     # Test requests
-    try:
-        response = requests.get("https://httpbin.org/get", timeout=5)
-        if response.status_code == 200:
-            print("✓ Requests package working correctly")
-        else:
-            print(f"✗ Requests package returned status {response.status_code}")
-            return False
-    except Exception as e:
-        print(f"✗ Failed to make HTTP request: {e}")
-        return False
+    # Verify requests can perform a simple GET
+    response = requests.get("https://httpbin.org/get", timeout=5)
+    assert response.status_code == 200, f"Requests returned {response.status_code}"
+    print("✓ Requests package working correctly")
     
     # Test dotenv
-    try:
-        load_dotenv()
-        print("✓ Python-dotenv package working correctly")
-    except Exception as e:
-        print(f"✗ Failed to load dotenv: {e}")
-        return False
+    load_dotenv()
+    print("✓ Python-dotenv package working correctly")
     
     print("\nAll tests passed! Development environment is ready.")
-    return True
 
 if __name__ == "__main__":
     if test_environment():

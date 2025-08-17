@@ -1,3 +1,22 @@
+import pytest
+from services.ai_design_service import AIDesignService
+
+
+def test_generate_image_testing_mode_returns_fake_bytes():
+    svc = AIDesignService(testing_mode=True)
+    img = svc.generate_image("anything")
+    assert isinstance(img, (bytes, bytearray))
+    assert b"fake_image_data" in img
+
+
+def test_generate_shirt_design_and_overlay():
+    svc = AIDesignService(testing_mode=True)
+    result = svc.generate_shirt_design("Test Topic")
+    assert isinstance(result, (bytes, bytearray))
+
+    # Current add_text_overlay returns the original image data in testing mode
+    over = svc.add_text_overlay(result, "Hello")
+    assert over == result
 """
 Test suite for AI design generation functionality.
 """
