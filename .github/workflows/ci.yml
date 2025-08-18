@@ -41,6 +41,8 @@ jobs:
           # Install repository-level requirements and backend requirements for tests (quiet, non-interactive)
           if [ -f requirements.txt ]; then python -m pip install -r requirements.txt --disable-pip-version-check --no-cache-dir -q; fi
           if [ -f src/backend/requirements.txt ]; then python -m pip install -r src/backend/requirements.txt --disable-pip-version-check --no-cache-dir -q; fi
+          # Ensure FastAPI is present (explicit, small install) as a short-term safeguard
+          python -m pip install fastapi --disable-pip-version-check -q || true
           python -m pip install pytest --disable-pip-version-check -q
 
       - name: Install / environment diagnostics (non-failing)
@@ -49,6 +51,11 @@ jobs:
           echo "--- python info ---"
           python -V || true
           which python || true
+          echo "--- repository files ---"
+          echo "requirements.txt (top-level):" || true
+          if [ -f requirements.txt ]; then sed -n '1,200p' requirements.txt; else echo 'missing'; fi
+          echo "src/backend/requirements.txt:" || true
+          if [ -f src/backend/requirements.txt ]; then sed -n '1,200p' src/backend/requirements.txt; else echo 'missing'; fi
           echo "--- pip packages (fastapi if installed) ---"
           python -m pip show fastapi || true
           python -m pip list --disable-pip-version-check | sed -n '1,200p' || true
